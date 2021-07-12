@@ -1,9 +1,11 @@
 import React from 'react'
 
-const AlbumItem = (props) => {
+const Album = (props) => {
     return (
         <div className="album-card">
-            <img src={props.image} alt={props.title}/>
+            <img src={props.album.image} alt={props.album.title} />
+            <p className="album-artist">{props.album.artist}</p>
+            <p className="album-title">{props.album.title}</p>
         </div>
     )
 }
