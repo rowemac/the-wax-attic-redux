@@ -2,7 +2,6 @@ import { Component } from 'react'
 import Album from '../components/Album'
 import { connect } from 'react-redux'
 import { fetchAlbums } from '../redux/actions/index'
-import NewAlbumForm from '../components/NewAlbumForm';
 
 class AlbumList extends Component {
     
