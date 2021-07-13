@@ -22,6 +22,7 @@ class NewAlbumForm extends Component {
     submitHandler = (e) => {
         e.preventDefault()
         this.props.addNewAlbum(this.state)
+        // this.props.history.push('/albums')
     }
 
     onChangeHandler = (e) => {
@@ -89,7 +90,7 @@ class NewAlbumForm extends Component {
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <br></br>
-                    <input type="submit" value="Add an Album" />
+                    <input type="submit" value="Add an Album" className="btn"/>
                 </form>
             </div>
         )
