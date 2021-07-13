@@ -1,13 +1,16 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { removeAlbum } from '../redux/actions/index'
 
-const Album = (props) => {
+const Album = ({ album, removeAlbum }) => {
     return (
         <div className="album-card">
-            <img src={props.album.image} alt={props.album.title} />
-            <p className="album-artist">{props.album.artist}</p>
-            <p className="album-title">{props.album.title}</p>
+            <img src={album.image} alt={album.title} />
+            <p className="album-artist">{album.artist}</p>
+            <p className="album-title">{album.title}</p>
+            <button onClick={ () => removeAlbum(album.id) }>Delete Album</button>
         </div>
     )
 }
 
-export default Album
+export default connect(null, { removeAlbum })(Album)
