@@ -1,39 +1,39 @@
 import { Component } from 'react'
 import Album from '../components/Album'
+import { connect } from 'react-redux'
+import { fetchAlbums } from '../redux/actions/index'
 import NewAlbumForm from '../components/NewAlbumForm';
 
 class AlbumList extends Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {
-            albumAll: []
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         albumAll: []
+    //     }
+    // }
 
     componentDidMount() {
-        this.setState({
-            albumAll: this.props.aL
-        })
-    }
-
-    submitHandlerNewAlbum = (newAlbum) => {
-        this.setState({
-            albumAll: [...this.state.albumAll, newAlbum]
-        })
+        this.props.fetchAlbums()
     }
 
     render() {
-        const mappedAlbums = this.state.albumAll.map( (album, i) => { return <Album album={album} key={i} submitData={this.submitHandlerNewAlbum} /> })
+        const mappedAlbums = this.props.albums.map( (album, i) => { return <Album album={album} key={i} /> })
         
-        return(<>
+        return(
             <div className="albums-container">
                 {mappedAlbums}
             </div>
-            <h4>Add an Album</h4>
-            <div><NewAlbumForm newAlbumProp={this.submitHandlerNewAlbum} /></div>
-        </>)
+        )
+    }
+
+}
+
+const mapStateToProps = (state) => {
+    return {
+        albums: state.albums
     }
 }
 
-export default AlbumList
+
+export default connect(mapStateToProps, { fetchAlbums })(AlbumList)
