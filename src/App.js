@@ -1,4 +1,5 @@
 import './App.css';
+import NewAlbumForm from './components/NewAlbumForm';
 import AlbumList from './containers/AlbumList';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <AlbumList />
+      <NewAlbumForm />
     </div>
   );
 }
