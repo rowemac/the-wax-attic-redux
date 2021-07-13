@@ -1,5 +1,4 @@
 export const fetchAlbums = () => {
-
     return(dispatch) => {
         fetch('http://127.0.0.1:3000/albums')
             .then(response => response.json())
@@ -8,4 +7,11 @@ export const fetchAlbums = () => {
             })
     }
 
+}
+
+export const addNewAlbum = (newAlbum) => {
+    return{
+        type: "ADD_ALBUM",
+        payload: newAlbum
+    }
 }
