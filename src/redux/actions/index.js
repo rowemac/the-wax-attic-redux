@@ -10,9 +10,16 @@ export const fetchAlbums = () => {
 }
 
 export const addNewAlbum = (newAlbum) => {
-    return{
-        type: "ADD_ALBUM",
-        payload: newAlbum
+    return(dispatch) => {
+        return fetch('http://127.0.0.1:3000/albums', {
+            method: 'POST', 
+            headers: { 'Content-Type': 'application/json' }, 
+            body: JSON.stringify({album: newAlbum})
+        })
+        .then(response => response.json())
+        .then(newAlbum => {
+            dispatch({ type: 'ADD_PET', payload: newAlbum })
+        })
     }
 }
 
