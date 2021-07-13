@@ -95,4 +95,4 @@ class NewAlbumForm extends Component {
         )
     }
 }
-export default connect(null, {addNewAlbum})(NewAlbumForm)
+export default connect(null, { addNewAlbum })(NewAlbumForm)
