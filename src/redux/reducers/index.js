@@ -4,5 +4,5 @@ import albums from './albumReducer'
 
 
 export default combineReducers({
-
+    albums 
 })
