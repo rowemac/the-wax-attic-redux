@@ -6,7 +6,6 @@ export const fetchAlbums = () => {
                 dispatch({ type: 'FETCH_ALBUMS', payload: albums})
             })
     }
-
 }
 
 export const addNewAlbum = (newAlbum) => {
@@ -23,8 +22,15 @@ export const addNewAlbum = (newAlbum) => {
     }
 }
 
-export const removeAlbum = () => {
-    return {
-        type: "REMOVE_ALBUM"
+export const removeAlbum = (albumID) => {
+    return(dispatch) => {
+        return fetch(`http://127.0.0.1:3000/albums/${albumID}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(response => response.json())
+        .then(album => {
+            dispatch({ type: 'REMOVE_ALBUM', payload: album.id })
+        })
     }
 }
