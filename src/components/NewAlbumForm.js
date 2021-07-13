@@ -1,33 +1,27 @@
 import { Component } from 'react'
+import { connect } from 'react-redux'
+import { addNewAlbum } from '../redux/actions/index'
 
 class NewAlbumForm extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            titleInput: "",
-            artistInput: "",
-            yearInput: "",
-            conditionInput: "",
-            lengthInput: "",
-            genreInput: "",
-            labelInput: "",
-            singleInput: "",
-            imageInput: ""
+            title: "",
+            artist: "",
+            year: "",
+            condition: "",
+            length: "",
+            genre: "",
+            label: "",
+            single: "",
+            image: ""
         }
     }
 
     submitHandler = (e) => {
         e.preventDefault()
-        this.props.newAlbumProp(this.state.titleInput)
-        // this.props.newAlbumProp(this.state.artistInput)
-        // this.props.newAlbumProp(this.state.yearInput)
-        // this.props.newAlbumProp(this.state.conditionInput)
-        // this.props.newAlbumProp(this.state.lengthInput)
-        // this.props.newAlbumProp(this.state.genreInput)
-        // this.props.newAlbumProp(this.state.labelInput)
-        // this.props.newAlbumProp(this.state.singleInput)
-        // this.props.newAlbumProp(this.state.imageInput)
+        this.props.addNewAlbum(this.state)
     }
 
     onChangeHandler = (e) => {
@@ -41,57 +35,57 @@ class NewAlbumForm extends Component {
             <div className="new-form-div">
                 <form onSubmit={this.submitHandler}>
                     <input type="text" 
-                        name="titleInput" 
+                        name="title" 
                         placeholder="Title" 
-                        value={this.state.titleInput} 
+                        value={this.state.title} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="artistInput" 
+                        name="artist" 
                         placeholder="Artist" 
-                        value={this.state.artistInput} 
+                        value={this.state.artist} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="yearInput" 
+                        name="year" 
                         placeholder="Year" 
-                        value={this.state.yearInput} 
+                        value={this.state.year} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="conditionInput" 
+                        name="condition" 
                         placeholder="Condition" 
-                        value={this.state.conditionInput} 
+                        value={this.state.condition} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="lengthInput" 
+                        name="length" 
                         placeholder="Length" 
-                        value={this.state.lengthInput} 
+                        value={this.state.length} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="genreInput" 
+                        name="genre" 
                         placeholder="Genre" 
-                        value={this.state.genreInput} 
+                        value={this.state.genre} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="labelInput" 
+                        name="label" 
                         placeholder="Label" 
-                        value={this.state.labelInput} 
+                        value={this.state.label} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="singleInput" 
+                        name="single" 
                         placeholder="Single" 
-                        value={this.state.singleInput} 
+                        value={this.state.single} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <input type="text" 
-                        name="imageInput" 
+                        name="image" 
                         placeholder="Image URL" 
-                        value={this.state.imageInput} 
+                        value={this.state.image} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <br></br>
@@ -100,9 +94,8 @@ class NewAlbumForm extends Component {
             </div>
         )
     }
-
 }
 
 
 
-export default NewAlbumForm
+export default connect(null, {addNewAlbum})(NewAlbumForm)
