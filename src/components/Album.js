@@ -6,8 +6,8 @@ const Album = ({ album, removeAlbum }) => {
     return (
         <div className="album-card">
             <img src={album.image} alt={album.title} />
-            <p className="album-artist">{album.artist}</p>
             <p className="album-title">{album.title}</p>
+            <p className="album-artist">{album.artist}</p>
             <button onClick={ () => removeAlbum(album.id) }>Delete Album</button>
         </div>
     )
