@@ -9,6 +9,7 @@ export const fetchAlbums = () => {
 }
 
 export const addNewAlbum = (newAlbum) => {
+    // return { type: 'ADD_ALBUM', payload: newAlbum }
     return(dispatch) => {
         return fetch('http://localhost:3000/albums', {
             method: 'POST', 
@@ -17,20 +18,19 @@ export const addNewAlbum = (newAlbum) => {
         })
         .then(response => response.json())
         .then(newAlbum => {
-            dispatch({ type: 'ADD_PET', payload: newAlbum })
+            dispatch({ type: 'ADD_ALBUM', payload: newAlbum })
         })
     }
 }
 
-export const removeAlbum = (albumID) => {
-    return(dispatch) => {
-        return fetch(`http://localhost:3000/albums/${albumID}`, {
+export const removeAlbum = (albumId) => {
+    return(dispatch) => {  dispatch({ type: 'REMOVE_ALBUM', payload: albumId })
+        return fetch(`http://localhost:3000/albums/${albumId}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })
-        .then(response => response.json())
-        .then(album => {
-            dispatch({ type: 'REMOVE_ALBUM', payload: album.id })
-        })
+        // .then(response => response.json())
+        // dispatch({ type: 'REMOVE_ALBUM', payload: albumID })
+
     }
 }
