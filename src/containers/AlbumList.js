@@ -5,13 +5,6 @@ import { fetchAlbums } from '../redux/actions/index'
 
 class AlbumList extends Component {
     
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         albumAll: []
-    //     }
-    // }
-
     componentDidMount() {
         this.props.fetchAlbums()
     }
