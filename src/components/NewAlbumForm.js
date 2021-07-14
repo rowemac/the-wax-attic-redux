@@ -22,7 +22,7 @@ class NewAlbumForm extends Component {
     submitHandler = (e) => {
         e.preventDefault()
         this.props.addNewAlbum(this.state)
-        this.props.history.push('/')
+        // this.props.history.push('/')
         this.setState({
             title: "",
             artist: "",
@@ -67,8 +67,10 @@ class NewAlbumForm extends Component {
                     <select
                     name="condition"
                     value={this.state.value} 
-                    onChange={this.onChangeHandler}>
-                        <option selected disabled>---Select a Conditon---</option>
+                    onChange={this.onChangeHandler}
+                    defaultValue={'DEFAULT'}
+                    >
+                        <option value="DEFAULT" disabled>---Select a Conditon---</option>
                         <option value="New">New</option>
                         <option value="Good">Good</option>
                         <option value="Fair">Fair</option>
