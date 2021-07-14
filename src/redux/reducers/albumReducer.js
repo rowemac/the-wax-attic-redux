@@ -6,13 +6,13 @@ export default ( state = [], action ) => {
         case "ADD_ALBUM":
             return [...state, action.payload]
         case "REMOVE_ALBUM":
-            let updatedAlbums = state.filter(album => album.id !== action.payload)
+            let updatedAlbums = state.filter(album => album.id !== action.payload.id)
             return [...updatedAlbums]
         case "EDIT_ALBUM":
-            let albumsToEdit = [...state.albums]
-            let albumIndex = albumsToEdit.findIndex(album => album.id === action.payload.id )
-            albumsToEdit[albumIndex] = action.payload 
-            return  [...albumsToEdit]
+            let albumsAll = [...state.albums]
+            let albumIndex = albumsAll.findIndex(album => album.id === action.payload.id )
+            albumsAll[albumIndex] = action.payload 
+            return  [...albumsAll]
         default:
             return state
     }
