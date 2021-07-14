@@ -12,5 +12,4 @@ const Album = ({ album, removeAlbum }) => {
         </div>
     )
 }
-
 export default connect(null, { removeAlbum })(Album)
