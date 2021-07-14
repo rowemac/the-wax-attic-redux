@@ -55,12 +55,17 @@ class NewAlbumForm extends Component {
                         value={this.state.year} 
                         onChange={this.onChangeHandler} 
                     /><br></br>
-                    <input type="text" 
-                        name="condition" 
-                        placeholder="Condition" 
-                        value={this.state.condition} 
-                        onChange={this.onChangeHandler} 
-                    /><br></br>
+                    <select
+                    name="condition"
+                    value={this.state.value} 
+                    onChange={this.onChangeHandler}>
+                        <option selected disabled>---Select a Conditon---</option>
+                        <option value="New">New</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                    <br></br>
                     <input type="text" 
                         name="length" 
                         placeholder="Length" 
