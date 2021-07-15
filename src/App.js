@@ -1,4 +1,5 @@
 import './App.css';
+import Home from './components/Home'
 import EditAlbumForm from './components/EditAlbumForm'
 import NewAlbumForm from './components/NewAlbumForm';
 import AlbumList from './containers/AlbumList';
@@ -11,7 +12,8 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-            <Route exact path="/" component={ AlbumList } />
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/albums" component={ AlbumList } />
             <Route exact path="/albums/new" component={ NewAlbumForm } />
             <Route exact path="/albums/:id/edit" component={ EditAlbumForm } />
           </Switch>
