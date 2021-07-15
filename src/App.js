@@ -7,10 +7,12 @@ function App() {
     return (
       <div className="App">
         <Router>
+          <Navbar />
           <Switch>
             <Route exact path="/" component={ AlbumList } />
+            <Route exact path="/albums/new" component={ NewAlbumForm } />
           </Switch>
-          <NewAlbumForm />
+          {/* <NewAlbumForm /> */}
         </Router>
       </div>
     );
