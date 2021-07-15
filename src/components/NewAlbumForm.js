@@ -22,7 +22,7 @@ class NewAlbumForm extends Component {
     submitHandler = (e) => {
         e.preventDefault()
         this.props.addNewAlbum(this.state)
-        // this.props.history.push('/')
+        this.props.history.push('/')
         this.setState({
             title: "",
             artist: "",
