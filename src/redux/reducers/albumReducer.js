@@ -9,10 +9,9 @@ export default ( state = [], action ) => {
             let updatedAlbums = state.filter(album => album.id !== action.payload)
             return [...updatedAlbums]
         case "EDIT_ALBUM":
-            let albumsAll = [...state.albums]
-            let albumIndex = albumsAll.findIndex(album => album.id === action.payload.id )
-            albumsAll[albumIndex] = action.payload 
-            return  [...albumsAll]
+            let albumsAll = [...state]
+            albumsAll.findIndex(album => album.id === action.payload.id )
+            return  [...albumsAll, action.payload]
         default:
             return state
     }
