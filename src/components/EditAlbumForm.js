@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { editAlbum } from '../redux/actions/index'
 
 class EditAlbumForm extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
+            id: "",
             title: "",
             artist: "",
             year: "",
@@ -20,6 +21,7 @@ class EditAlbumForm extends Component {
 
     componentDidMount(){
         this.setState({
+            id: this.props.album.id, 
             title: this.props.album.title,
             artist: this.props.album.artist,
             year: this.props.album.year,
@@ -40,12 +42,13 @@ class EditAlbumForm extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        this.props.addNewAlbum(this.state)
+        this.props.editAlbum(this.state)
+        this.props.history.push('/')
     }
 
     render() {
         return(
-            <div className="new-form-div">
+            <div className="edit-form-div">
                 <form onSubmit={this.submitHandler}>
                     <input type="text" 
                         name="title" 
@@ -109,7 +112,7 @@ class EditAlbumForm extends Component {
                         onChange={this.onChangeHandler} 
                     /><br></br>
                     <br></br>
-                    <input type="submit" value="Add an Album" className="btn"/>
+                    <input type="submit" value="Save Changes" className="btn"/>
                 </form>
             </div>
         )
@@ -120,7 +123,7 @@ class EditAlbumForm extends Component {
 const mapStateToProps = (state, albumId) => {
     const id = parseInt(albumId.match.params.id)
     return {
-        album: state.find(album => album.id === id)
+        album: state.albums.find(album => album.id === id)
     }
 }
 export default connect(mapStateToProps, { editAlbum })(EditAlbumForm)
