@@ -7,7 +7,7 @@ import { editAlbum } from '../redux/actions/index'
 const Album = ({ album, removeAlbum, editAlbum }) => {
     return (
         <div className="album-card">
-            <img src={album.image} alt={album.title} />
+            <img className="album-image" src={album.image} alt={album.title} />
             <p className="album-title">{album.title}</p>
             <p className="album-artist">{album.artist}</p>
             <NavLink to={`/albums/${album.id}/edit`}><button onClick={()=>editAlbum(album)}>Edit</button></NavLink>
