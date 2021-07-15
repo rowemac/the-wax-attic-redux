@@ -32,7 +32,7 @@ export const removeAlbum = (albumId) => {
 }
 
 export const editAlbum = (album) => {
-    return(dispatch) => {
+    return(dispatch) => { 
         return fetch(`http://localhost:3000/albums/${album.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
