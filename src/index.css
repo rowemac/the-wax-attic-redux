@@ -15,7 +15,8 @@ body {
   object-position: center; 
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  height: 850px;
+  width: 850px;
 }
 
 .album-image {
