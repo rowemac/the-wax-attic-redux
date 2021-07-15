@@ -43,7 +43,7 @@ class EditAlbumForm extends Component {
     submitHandler = e => {
         e.preventDefault()
         this.props.editAlbum(this.state)
-        this.props.history.push('/')
+        this.props.history.push('/albums')
     }
 
     render() {
