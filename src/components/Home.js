@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     return (
-        <h1>Welcome!</h1>
+        <img className="logo" src="/the_wax_attic.png" alt="the wax attic." />
     )
 }
 export default Home
