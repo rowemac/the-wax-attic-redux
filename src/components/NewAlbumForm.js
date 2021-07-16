@@ -45,7 +45,7 @@ class NewAlbumForm extends Component {
     render() {
         return(
             <div className="new-form-div">
-                <form onSubmit={this.submitHandler}>
+                <form className="form" onSubmit={this.submitHandler}>
                     <input type="text" 
                         name="title" 
                         placeholder="Title" 

@@ -49,7 +49,7 @@ class EditAlbumForm extends Component {
     render() {
         return(
             <div className="edit-form-div">
-                <form onSubmit={this.submitHandler}>
+                <form className="form" onSubmit={this.submitHandler}>
                     <input type="text" 
                         name="title" 
                         placeholder="Title" 
