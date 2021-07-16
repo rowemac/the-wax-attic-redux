@@ -4,7 +4,7 @@ const Search = (props) => {
     return (
         <input 
             type="text"
-            placeholder="Search albums"
+            placeholder="Search albums..."
             onChange={(event) => props.callback(event.target.value)}
         />
     )
