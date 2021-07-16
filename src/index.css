@@ -4,10 +4,10 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.btn {
+/* .btn {
   margin-left: 8px;
   margin-right: 8px;
-}
+} */
 
 .logo {
   display: block; 
@@ -24,10 +24,10 @@ body {
   height: 350px; 
   width: 350px; 
   object-fit: cover; 
-  object-position: center; 
+  /* object-position: center; 
   margin-left: auto;
   margin-right: auto;
-  margin-left: 35px;
+  margin-left: 35px; */
 }
 
 .albums-container {
@@ -41,26 +41,29 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .album-title {
-  color: ghostwhite;
+  color: rgb(229, 229, 233);
   font-style: italic;
   text-align: center;
 }
 
 .album-artist {
-  color: ghostwhite;
+  color: rgb(229, 229, 233);
   margin-top: -10px;
   /* text-align: center; */
 }
 
 .footer{
-  color: ghostwhite;
+  color: rgb(229, 229, 233);
 }
 
 .navbar {
-  background-color: ghostwhite;
+  background-color: rgb(229, 229, 233);
   font-size: large;
   padding: 15px;
 }
@@ -76,12 +79,13 @@ body {
   display: inline;
   margin: 25px;
   text-align: center;
-  padding: 15px;
+  padding-top: 18px;
+  padding-bottom: 16px;
 }
 
 .navlink-li:hover {
-  background-color: steelblue;
-  color:ghostwhite;
+  background-color: rgb(174, 174, 177);
+  /* color:ghostwhite; */
   transition: 0.3s;
 }
 
@@ -89,6 +93,11 @@ body {
   color:black;
   text-decoration: none;
   padding: 15px;
+  font-family: Abril Fatface;
+}
+
+.navlink-logo {
+
 }
 
 .form {
@@ -100,7 +109,7 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: ghostwhite;
+  background-color: rgb(229, 229, 233);
   border-radius: 4px;
 }
 
@@ -109,7 +118,7 @@ select {
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  background-color: ghostwhite;
+  background-color: rgb(229, 229, 233);
 }
 
 .albums-container {
@@ -117,7 +126,7 @@ select {
 }
 
 input[type=button], input[type=submit] {
-  background-color:ghostwhite;
+  background-color:rgb(229, 229, 233);
   border: none;
   border-radius: 4px;
   /* color: white; */
@@ -133,7 +142,7 @@ input[type=button], input[type=submit]:hover {
 }
 
 .btn {
-  background-color:ghostwhite;
+  background-color:rgb(229, 229, 233);
   border: none;
   border-radius: 4px;
   /* color: white; */
@@ -146,7 +155,7 @@ input[type=button], input[type=submit]:hover {
 }
 
 .btn:hover {
-  background-color:steelblue;
+  background-color:rgb(174, 174, 177);
   transition: 0.3s;
 }
 
@@ -180,8 +189,6 @@ input[type=button], input[type=submit]:hover {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  margin-right: 35px;
-
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -192,11 +199,9 @@ input[type=button], input[type=submit]:hover {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: rgb(229, 229, 233);
+  color: #424141;
   transform: rotateY(180deg);
   height: 350px; 
   width: 350px; 
-  /* margin-left: 35px; */
-
 }
