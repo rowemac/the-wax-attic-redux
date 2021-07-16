@@ -13,16 +13,22 @@ const Album = ({ album, removeAlbum, editAlbum }) => {
                         <img className="album-image" src={album.image} alt={album.title} />
                     </div>
                     <div className="flip-card-back">
-                        <h1>Hello!</h1>
+                        <p>{album.year}</p>
+                        <p>Condition: {album.condition}</p>
+                        <p>Length: {album.length}</p>
+                        <p>Genre: {album.genre}</p>
+                        <p>Label: {album.label}</p>
+                        <p>Single: "{album.single}"</p>
                     </div>
                 </div>
 
             </div>
-
-            <p className="album-title">{album.title}</p>
-            <p className="album-artist">{album.artist}</p>
-            <NavLink to={`/albums/${album.id}/edit`}><button className="btn" onClick={()=>editAlbum(album)}>Edit</button></NavLink>
-            <button className="btn" onClick={ () => removeAlbum(album.id) }>Delete</button>
+            <div className="album-init-info">
+                <p className="album-title">{album.title}</p>
+                <p className="album-artist">{album.artist}</p>
+                <NavLink to={`/albums/${album.id}/edit`}><button className="btn" onClick={()=>editAlbum(album)}>Edit</button></NavLink>
+                <button className="btn" onClick={ () => removeAlbum(album.id) }>Delete</button>
+            </div>
         </div>
     )
 }
