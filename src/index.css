@@ -49,5 +49,39 @@ body {
 
 .album-artist {
   color: gainsboro;
+  margin-top: -10px;
 }
 
+.footer{
+  color: gainsboro;
+}
+
+.navbar {
+  background-color: gainsboro;
+  font-size: large;
+  padding: 15px;
+}
+
+.navlinks-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.navlink-li {
+  display: inline;
+  margin: 25px;
+  text-align: center;
+  padding: 15px;
+}
+
+.navlink-li:hover {
+  background-color: #202020;
+  color:gainsboro;
+}
+
+.navlink-item {
+  color:black;
+  text-decoration: none;
+}
