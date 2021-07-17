@@ -13,7 +13,6 @@ class AlbumList extends Component {
         }
     }
 
-    
     componentDidMount() {
         this.props.fetchAlbums()
     }
@@ -22,7 +21,6 @@ class AlbumList extends Component {
         this.setState({
             term: term 
         })
-        console.log(term)
     }
 
     filterIt = () => {
