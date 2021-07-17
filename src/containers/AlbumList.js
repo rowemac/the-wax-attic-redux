@@ -5,32 +5,43 @@ import { fetchAlbums } from '../redux/actions/index'
 import Search from '../components/Search'
 
 class AlbumList extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            term: ""
+        }
+    }
+
     
     componentDidMount() {
         this.props.fetchAlbums()
     }
 
-    callback = (term) => {
+    searchAlbums = (term) => {
         this.setState({
             term: term 
         })
+        console.log(term)
     }
 
-    filterIt = (searchTerm) => {
-        let filteredAlbums = this.props.albums.filter(album => album.title.toLowerCase().includes(searchTerm) || album.artist.toLowerCase().includes(searchTerm))
+    filterIt = () => {
+        let lowerStateTerm = this.state.term.toLowerCase()
+        let filteredAlbums = this.props.albums.filter(album => album.title.toLowerCase().includes(lowerStateTerm) || album.artist.toLowerCase().includes(lowerStateTerm))
+        console.log(filteredAlbums)
         return (filteredAlbums.map( (album, i) => { return <Album album={album} key={i} /> }))
         // return filteredAlbums
     } 
 
 
-    render() {
-        const mappedAlbums = this.props.albums.map( (album, i) => { return <Album album={album} key={i} /> })
+    render() { console.log(this.state.term)
+        // const mappedAlbums = this.props.albums.map( (album, i) => { return <Album album={album} key={i} /> })
         
         return(<>
-            <Search />
+            <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
             <div className="albums-container">
-                {mappedAlbums}
-                {/* {this.filterIt()} */}
+                {/* {mappedAlbums} */}
+                {this.filterIt()}
             </div>
         </>)
     }
