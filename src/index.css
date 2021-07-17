@@ -4,11 +4,6 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* .btn {
-  margin-left: 8px;
-  margin-right: 8px;
-} */
-
 .logo {
   display: block; 
   object-fit: cover; 
@@ -24,10 +19,6 @@ body {
   height: 350px; 
   width: 350px; 
   object-fit: cover; 
-  /* object-position: center; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-left: 35px; */
 }
 
 .albums-container {
@@ -55,7 +46,6 @@ body {
 .album-artist {
   color: rgb(229, 229, 233);
   margin-top: -10px;
-  /* text-align: center; */
 }
 
 .footer{
@@ -83,10 +73,15 @@ body {
   padding-bottom: 16px;
 }
 
+.logo-navlink-li {
+  display: inline;
+  margin: 25px;
+  text-align: center;
+}
+
 .navlink-li:hover {
   background-color: rgb(174, 174, 177);
-  /* color:ghostwhite; */
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .navlink-item {
@@ -95,10 +90,12 @@ body {
   padding: 15px;
   font-family: Abril Fatface;
 }
-
-.navlink-logo {
-
-}
+/* 
+.navlink-logo-img {
+  background-color: #202020;
+  height: 75px;
+  width: 75px;
+}  */
 
 .form {
   margin-top: 75px;
@@ -154,16 +151,32 @@ input[type=button], input[type=submit]:hover {
   margin-right: 5px;
 }
 
+.delete-btn {
+  background-color:rgb(229, 229, 233);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .btn:hover {
   background-color:rgb(174, 174, 177);
-  transition: 0.3s;
+  transition: 0.4s;
+}
+
+.delete-btn:hover {
+  background-color: rgb(231, 39, 39);
+  transition: 0.4s;
 }
 
 .flip-card {
   background-color: transparent;
   height: 350px; 
   width: 350px; 
-  /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
