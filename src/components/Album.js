@@ -27,7 +27,7 @@ const Album = ({ album, removeAlbum, editAlbum }) => {
                 <p className="album-title">{album.title}</p>
                 <p className="album-artist">{album.artist}</p>
                 <NavLink to={`/albums/${album.id}/edit`}><button className="btn" onClick={()=>editAlbum(album)}>Edit</button></NavLink>
-                <button className="btn" onClick={ () => removeAlbum(album.id) }>Delete</button>
+                <button className="delete-btn" onClick={ () => removeAlbum(album.id) }>Delete</button>
             </div>
         </div>
     )
