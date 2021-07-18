@@ -23,23 +23,20 @@ class AlbumList extends Component {
         })
     }
 
-    filterIt = () => {
+    filterAlbums = () => {
         let lowerStateTerm = this.state.term.toLowerCase()
-        let filteredAlbums = this.props.albums.filter(album => album.title.toLowerCase().includes(lowerStateTerm) || album.artist.toLowerCase().includes(lowerStateTerm))
-        console.log(filteredAlbums)
+        let filteredAlbums = this.props.albums.filter(album => 
+            album.title.toLowerCase().includes(lowerStateTerm) || 
+            album.artist.toLowerCase().includes(lowerStateTerm))
         return (filteredAlbums.map( (album, i) => { return <Album album={album} key={i} /> }))
-        // return filteredAlbums
     } 
 
 
-    render() { console.log(this.state.term)
-        // const mappedAlbums = this.props.albums.map( (album, i) => { return <Album album={album} key={i} /> })
-        
+    render() { 
         return(<>
             <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
             <div className="albums-container">
-                {/* {mappedAlbums} */}
-                {this.filterIt()}
+                {this.filterAlbums()}
             </div>
         </>)
     }
