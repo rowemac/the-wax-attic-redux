@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# the wax attic.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The Wax Attic Single Page Application (SPA) serves as fully interactive library for vinyl album lovers who wish to monitor their collection records all in one place. The client is able to create new album instances, edit current instances, or even delete instances entirely. This full CRUD funcitonality is made possible with the use of seamless, user-friendly controlled forms. Finally, if a user wishes to find an album fast, a search bar at the top of the page will help them sort albums by either album title or artist name. 
 
-In the project directory, you can run:
+**This repo should be used in conjunction with the backend repo link listed below to fully experience the app's functionality.**
 
-### `yarn start`
+Once both servers are up and running a user may modify or add to the backend database from the Rails API as they see fit on their local machine. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Install Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Fork the repo and copy the SSH link.
 
-### `yarn test`
+- `cd` into your desired folder and paste the SSH link into your terminal and hit `enter`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Once opened in your preferred text editor, open the terminal and type `yarn start` or `npm start` to fire up the frontend server.
 
-### `yarn build`
+- A browser window should open automatically but if not, type: http://localhost8000 into your URL field in the browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend Repo Link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://github.com/rowemac/the-wax-attic-redux-backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributer's Gude
 
-### `yarn eject`
+- If you wish to contribute to this repo please submit a pull request or a new issue. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- This app is licensed under The MIT License located here: https://github.com/rowemac/CriteriGuide-Front-End/blob/main/LICENSE.md
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Sources
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- https://en.wikipedia.org/wiki/Main_Page
+- https://www.amazon.com/
+- https://www.w3schools.com/
