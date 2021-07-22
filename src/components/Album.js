@@ -13,12 +13,14 @@ const Album = ({ album, removeAlbum, editAlbum }) => {
                         <img className="album-image" src={album.image} alt={album.title} />
                     </div>
                     <div className="flip-card-back">
-                        <p>{album.year}</p>
-                        <p>Condition: {album.condition}</p>
-                        <p>Length: {album.length}</p>
-                        <p>Genre: {album.genre}</p>
-                        <p>Label: {album.label}</p>
-                        <p>Single: "{album.single}"</p>
+                        <div className="back-text">
+                            <p>{album.year}</p>
+                            <p>Condition: {album.condition}</p>
+                            <p>Length: {album.length}</p>
+                            <p>Genre: {album.genre}</p>
+                            <p>Label: {album.label}</p>
+                            <p>Single: "{album.single}"</p>
+                        </div>
                     </div>
                 </div>
 
