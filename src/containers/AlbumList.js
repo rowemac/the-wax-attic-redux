@@ -34,6 +34,7 @@ class AlbumList extends Component {
 
     render() { 
         return(<>
+            <br></br><br></br>
             <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
             <div className="albums-container">
                 {this.filterAlbums()}
