@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './components/Home'
-import EditAlbumForm from './components/EditAlbumForm'
-import NewAlbumForm from './components/NewAlbumForm';
+import EditAlbumForm from './containers/EditAlbumForm'
+import NewAlbumForm from './containers/NewAlbumForm';
 import AlbumList from './containers/AlbumList';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
