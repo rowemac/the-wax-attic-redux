@@ -1,8 +1,9 @@
 body {
   margin: 0;
   background-color: #202020;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif
 }
+
 
 .logo {
   display: block; 
@@ -213,4 +214,16 @@ input[type=button], input[type=submit]:hover {
 
 .back-text{
   padding-top: 50px;
+}
+
+.logo-img {
+  height: 100px;
+  width: 100px;
+}
+
+.header {
+  color:rgb(229, 229, 233);
+  text-decoration: none;
+  font-family: Abril Fatface;
+  margin-bottom: 25px;
 }
