@@ -24,6 +24,7 @@ class AlbumList extends Component {
         })
     }
 
+
     filterAlbums = () => {
         let lowerStateTerm = this.state.term.toLowerCase()
         let filteredAlbums = this.props.albums.filter(album => 

@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { removeAlbum } from '../redux/actions/index'
 import { editAlbum } from '../redux/actions/index'
+import CounterButton from './CounterButton'
 
 const Album = ({ album, removeAlbum, editAlbum }) => {
+    
     return (
         <div className="album-card">
             <div className="flip-card">
@@ -30,6 +32,7 @@ const Album = ({ album, removeAlbum, editAlbum }) => {
                 <p className="album-artist">{album.artist}</p>
                 <NavLink to={`/albums/${album.id}/edit`}><button className="btn" onClick={()=>editAlbum(album)}>Edit</button></NavLink>
                 <button className="delete-btn" onClick={ () => removeAlbum(album.id) }>Delete</button>
+                <CounterButton />
             </div>
         </div>
     )
