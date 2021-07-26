@@ -3,6 +3,7 @@ import Album from '../components/Album'
 import { connect } from 'react-redux'
 import { fetchAlbums } from '../redux/actions/index'
 import Search from '../components/Search'
+import Header from '../components/Header'
 
 class AlbumList extends Component {
 
@@ -35,6 +36,7 @@ class AlbumList extends Component {
     render() { 
         return(<>
             <br></br><br></br>
+            <Header />
             <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
             <div className="albums-container">
                 {this.filterAlbums()}
