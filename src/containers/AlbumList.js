@@ -10,7 +10,8 @@ class AlbumList extends Component {
     constructor() {
         super()
         this.state = {
-            term: ""
+            term: "",
+            count: ""
         }
     }
 
@@ -24,13 +25,19 @@ class AlbumList extends Component {
         })
     }
 
+    onChangeHandler = (e) => {
+        this.setState({
+            count: e.target.value
+        })
+    }
+
 
     filterAlbums = () => {
         let lowerStateTerm = this.state.term.toLowerCase()
         let filteredAlbums = this.props.albums.filter(album => 
             album.title.toLowerCase().includes(lowerStateTerm) || 
             album.artist.toLowerCase().includes(lowerStateTerm))
-        return (filteredAlbums.map( (album, i) => { return <Album album={album} key={i} /> }))
+        return (filteredAlbums.map( (album, i) => { return <Album album={album} key={i} likeCount={parseInt(this.state.count)} /> }))
     } 
 
 
@@ -39,6 +46,14 @@ class AlbumList extends Component {
             <br></br><br></br>
             <Header />
             <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
+            <input 
+            type="text"
+            placeholder="Enter number of likes"
+            onChange={this.onChangeHandler}
+            value={this.state.count}
+            />
+            {/* <p>{this.state.count}</p> */}
+            <br></br>
             <div className="albums-container">
                 {this.filterAlbums()}
             </div>
