@@ -11,7 +11,6 @@ class AlbumList extends Component {
         super()
         this.state = {
             term: "",
-            count: ""
         }
     }
 
@@ -46,13 +45,6 @@ class AlbumList extends Component {
             <br></br><br></br>
             <Header />
             <Search searchTermProp={this.state.term} search={this.searchAlbums}/>
-            <input 
-            type="text"
-            placeholder="Enter number of likes"
-            onChange={this.onChangeHandler}
-            value={this.state.count}
-            />
-            {/* <p>{this.state.count}</p> */}
             <br></br>
             <div className="albums-container">
                 {this.filterAlbums()}
